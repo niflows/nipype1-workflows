@@ -2,9 +2,9 @@
 import os.path as op  # system functions
 
 from .connectivity_mapping import create_connectivity_pipeline
-from ....interfaces import io as nio  # Data i/o
-from ....interfaces import utility as util  # utility
-from ....pipeline import engine as pe  # pypeline engine
+from nipype.interfaces import io as nio  # Data i/o
+from nipype.interfaces import utility as util  # utility
+from nipype.pipeline import engine as pe  # pypeline engine
 
 
 def create_group_connectivity_pipeline(group_list,

@@ -6,9 +6,9 @@ from builtins import open, str
 
 import warnings
 
-from ....pipeline import engine as pe
-from ....interfaces import utility as niu
-from ....interfaces import fsl as fsl
+from nipype.pipeline import engine as pe
+from nipype.interfaces import utility as niu
+from nipype.interfaces import fsl as fsl
 
 
 def create_dmri_preprocessing(name='dMRI_preprocessing',

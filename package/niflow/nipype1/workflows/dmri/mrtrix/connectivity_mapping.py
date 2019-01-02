@@ -2,18 +2,18 @@
 import inspect
 import os.path as op  # system functions
 
-from ....interfaces import io as nio  # Data i/o
-from ....interfaces import utility as util  # utility
-from ....pipeline import engine as pe  # pypeline engine
-from ....interfaces import fsl as fsl
-from ....interfaces import freesurfer as fs  # freesurfer
-from ....interfaces import mrtrix as mrtrix
-from ....interfaces import cmtk as cmtk
-from ....interfaces import dipy as dipy
-from ....algorithms import misc as misc
+from nipype.pipeline import engine as pe  # pypeline engine
+from nipype.interfaces import io as nio  # Data i/o
+from nipype.interfaces import utility as util  # utility
+from nipype.interfaces.utility import Function
+from nipype.interfaces import fsl as fsl
+from nipype.interfaces import freesurfer as fs  # freesurfer
+from nipype.interfaces import mrtrix as mrtrix
+from nipype.interfaces import cmtk as cmtk
+from nipype.interfaces import dipy as dipy
+from nipype.algorithms import misc as misc
 from ..fsl.epi import create_eddy_correct_pipeline
 from ..connectivity.nx import create_networkx_pipeline, create_cmats_to_csv_pipeline
-from ....interfaces.utility import Function
 from ...misc.utils import select_aparc_annot
 
 

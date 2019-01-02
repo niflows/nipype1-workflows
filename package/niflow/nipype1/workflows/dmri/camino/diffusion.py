@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from ....interfaces import utility as util  # utility
-from ....pipeline import engine as pe  # pypeline engine
-from ....interfaces import camino as camino
-from ....interfaces import fsl as fsl
-from ....interfaces import camino2trackvis as cam2trk
-from ....algorithms import misc as misc
+from nipype.interfaces import utility as util  # utility
+from nipype.pipeline import engine as pe  # pypeline engine
+from nipype.interfaces import camino as camino
+from nipype.interfaces import fsl as fsl
+from nipype.interfaces import camino2trackvis as cam2trk
+from nipype.algorithms import misc as misc
 from ...misc.utils import get_affine, get_data_dims, get_vox_dims
 
 

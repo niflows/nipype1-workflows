@@ -7,13 +7,13 @@ from future.utils import raise_from
 
 import os.path as op
 
-from ....interfaces import io as nio  # Data i/o
-from ....interfaces import utility as util  # utility
-from ....interfaces import cmtk as cmtk
-from ....algorithms import misc as misc
-from ....pipeline import engine as pe  # pypeline engine
-from ....interfaces.utility import Function
-from ....utils.misc import package_check
+from nipype.interfaces import io as nio  # Data i/o
+from nipype.interfaces import utility as util  # utility
+from nipype.interfaces import cmtk as cmtk
+from nipype.algorithms import misc as misc
+from nipype.pipeline import engine as pe  # pypeline engine
+from nipype.interfaces.utility import Function
+from nipype.utils.misc import package_check
 
 have_cmp = True
 try:

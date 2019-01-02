@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import (print_function, division, unicode_literals,
                         absolute_import)
-from ....interfaces.utility import Function, IdentityInterface, Merge
-from ....pipeline import engine as pe
-from ....interfaces.freesurfer import *
+from nipype.interfaces.utility import Function, IdentityInterface, Merge
+from nipype.pipeline import engine as pe
+from nipype.interfaces.freesurfer import *
 from .utils import copy_file
 
 

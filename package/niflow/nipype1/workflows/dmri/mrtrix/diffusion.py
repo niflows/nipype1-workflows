@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from ....interfaces import utility as util  # utility
-from ....pipeline import engine as pe  # pypeline engine
-from ....interfaces import fsl as fsl
-from ....interfaces import mrtrix as mrtrix
+from nipype.interfaces import utility as util  # utility
+from nipype.pipeline import engine as pe  # pypeline engine
+from nipype.interfaces import fsl as fsl
+from nipype.interfaces import mrtrix as mrtrix
 
 
 def create_mrtrix_dti_pipeline(name="dtiproc",

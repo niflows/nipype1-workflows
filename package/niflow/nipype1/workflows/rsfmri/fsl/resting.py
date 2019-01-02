@@ -5,10 +5,10 @@ from __future__ import (print_function, division, unicode_literals,
                         absolute_import)
 from builtins import str
 
-from ....interfaces import fsl as fsl  # fsl
-from ....interfaces import utility as util  # utility
-from ....pipeline import engine as pe  # pypeline engine
-from ....algorithms import confounds
+from nipype.interfaces import fsl as fsl  # fsl
+from nipype.interfaces import utility as util  # utility
+from nipype.pipeline import engine as pe  # pypeline engine
+from nipype.algorithms import confounds
 
 
 def select_volume(filename, which):

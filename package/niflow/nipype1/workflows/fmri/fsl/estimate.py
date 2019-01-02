@@ -3,11 +3,11 @@
 # vi: set ft=python sts=4 ts=4 sw=4 et:
 from builtins import range
 
-from ....interfaces import fsl as fsl  # fsl
-from ....interfaces import utility as util  # utility
-from ....pipeline import engine as pe  # pypeline engine
+from nipype.interfaces import fsl as fsl  # fsl
+from nipype.interfaces import utility as util  # utility
+from nipype.pipeline import engine as pe  # pypeline engine
 
-from .... import LooseVersion
+from distutils.version import LooseVersion
 
 
 def create_modelfit_workflow(name='modelfit', f_contrasts=False):

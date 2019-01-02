@@ -4,13 +4,13 @@
 from __future__ import division
 
 import os
-from ....interfaces import fsl as fsl  # fsl
-from ....interfaces import utility as util  # utility
-from ....pipeline import engine as pe  # pypeline engine
-from ....interfaces import freesurfer as fs  # freesurfer
-from ....interfaces import spm as spm
+from nipype.interfaces import fsl as fsl  # fsl
+from nipype.interfaces import utility as util  # utility
+from nipype.pipeline import engine as pe  # pypeline engine
+from nipype.interfaces import freesurfer as fs  # freesurfer
+from nipype.interfaces import spm as spm
 from ...smri.freesurfer.utils import create_getmask_flow
-from .... import LooseVersion
+from distutils.version import LooseVersion
 
 
 def getthreshop(thresh):

@@ -4,13 +4,14 @@
 
 import os
 
-from ....algorithms import rapidart as ra
-from ....interfaces import spm as spm
-from ....interfaces import utility as niu
-from ....pipeline import engine as pe
+from nipype import logging
+
+from nipype.algorithms import rapidart as ra
+from nipype.interfaces import spm as spm
+from nipype.interfaces import utility as niu
+from nipype.pipeline import engine as pe
 from ...smri.freesurfer.utils import create_getmask_flow
 
-from .... import logging
 logger = logging.getLogger('nipype.workflow')
 
 

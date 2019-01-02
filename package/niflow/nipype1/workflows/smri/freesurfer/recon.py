@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import (print_function, division, unicode_literals,
                         absolute_import)
-from ....pipeline import engine as pe
-from ....interfaces import freesurfer as fs
-from ....interfaces import utility as niu
+from nipype.pipeline import engine as pe
+from nipype.interfaces import freesurfer as fs
+from nipype.interfaces import utility as niu
+from nipype.interfaces.freesurfer import AddXFormToHeader, Info
+from nipype.interfaces.io import DataSink
+from nipype import logging
 from .autorecon1 import create_AutoRecon1
 from .autorecon2 import create_AutoRecon2
 from .autorecon3 import create_AutoRecon3
-from ....interfaces.freesurfer import AddXFormToHeader, Info
-from ....interfaces.io import DataSink
 from .utils import getdefaultconfig
-from .... import logging
 
 logger = logging.getLogger('nipype.workflow')
 

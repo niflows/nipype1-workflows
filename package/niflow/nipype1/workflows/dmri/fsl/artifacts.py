@@ -5,11 +5,11 @@
 from __future__ import (print_function, division, unicode_literals,
                         absolute_import)
 
-from ....interfaces.io import JSONFileGrabber
-from ....interfaces import utility as niu
-from ....interfaces import ants
-from ....interfaces import fsl
-from ....pipeline import engine as pe
+from nipype.interfaces.io import JSONFileGrabber
+from nipype.interfaces import utility as niu
+from nipype.interfaces import ants
+from nipype.interfaces import fsl
+from nipype.pipeline import engine as pe
 from ...data import get_flirt_schedule
 
 from .utils import (

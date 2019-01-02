@@ -5,9 +5,9 @@
 import os
 from warnings import warn
 
-from ....pipeline import engine as pe
-from ....interfaces import utility as util
-from ....interfaces import fsl as fsl
+from nipype.pipeline import engine as pe
+from nipype.interfaces import utility as util
+from nipype.interfaces import fsl as fsl
 
 
 def tbss1_op_string(in_files):

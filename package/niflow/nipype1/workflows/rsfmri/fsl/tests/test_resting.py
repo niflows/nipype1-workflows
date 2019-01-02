@@ -6,9 +6,9 @@ import os
 import mock
 import numpy as np
 
-from .....testing import utils
-from .....interfaces import IdentityInterface
-from .....pipeline.engine import Node, Workflow
+from nipype.testing import utils
+from nipype.interfaces import IdentityInterface
+from nipype.pipeline.engine import Node, Workflow
 
 from ..resting import create_resting_preproc
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from ....pipeline import engine as pe
-from ....interfaces import utility as util
-from ....interfaces import cmtk as cmtk
-from ....algorithms import misc as misc
-from ....algorithms.misc import remove_identical_paths
+from nipype.pipeline import engine as pe
+from nipype.interfaces import utility as util
+from nipype.interfaces import cmtk as cmtk
+from nipype.algorithms import misc as misc
+from nipype.algorithms.misc import remove_identical_paths
 from .group_connectivity import pullnodeIDs
 
 

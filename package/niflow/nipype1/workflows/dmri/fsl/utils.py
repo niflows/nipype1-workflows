@@ -7,10 +7,10 @@ from __future__ import (print_function, division, unicode_literals,
                         absolute_import)
 from builtins import zip, next, range, str
 
-from ....pipeline import engine as pe
-from ....interfaces import utility as niu
-from ....interfaces import fsl
-from ....interfaces import ants
+from nipype.pipeline import engine as pe
+from nipype.interfaces import utility as niu
+from nipype.interfaces import fsl
+from nipype.interfaces import ants
 
 
 def cleanup_edge_pipeline(name='Cleanup'):

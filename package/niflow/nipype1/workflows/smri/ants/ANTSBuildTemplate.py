@@ -15,12 +15,12 @@ from builtins import map
 from builtins import zip
 from builtins import range
 
-from ....pipeline import engine as pe
-from ....interfaces import utility as util
-from ....interfaces.utility import Function
+from nipype.pipeline import engine as pe
+from nipype.interfaces import utility as util
+from nipype.interfaces.utility import Function
 
-from ....interfaces.ants import (ANTS, WarpImageMultiTransform, AverageImages,
-                                 MultiplyImages, AverageAffineTransform)
+from nipype.interfaces.ants import (ANTS, WarpImageMultiTransform, AverageImages,
+                                    MultiplyImages, AverageAffineTransform)
 
 
 def GetFirstListElement(this_list):

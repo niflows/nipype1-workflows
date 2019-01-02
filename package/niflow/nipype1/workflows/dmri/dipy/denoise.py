@@ -4,9 +4,9 @@
 # vi: set ft=python sts=4 ts=4 sw=4 et:
 
 from builtins import range
-from ....pipeline import engine as pe
-from ....interfaces import utility as niu
-from ....interfaces import dipy
+from nipype.pipeline import engine as pe
+from nipype.interfaces import utility as niu
+from nipype.interfaces import dipy
 
 
 def nlmeans_pipeline(name='Denoise',

@@ -13,12 +13,12 @@
 from __future__ import print_function
 from builtins import range
 
-from ....pipeline import engine as pe
-from ....interfaces import utility as util
-from ....interfaces.utility import Function
+from nipype.pipeline import engine as pe
+from nipype.interfaces import utility as util
+from nipype.interfaces.utility import Function
 
-from ....interfaces.ants import (Registration, ApplyTransforms, AverageImages,
-                                 MultiplyImages, AverageAffineTransform)
+from nipype.interfaces.ants import (Registration, ApplyTransforms, AverageImages,
+                                    MultiplyImages, AverageAffineTransform)
 
 
 def makeListOfOneElement(inputFile):

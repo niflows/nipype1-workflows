@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import (print_function, division, unicode_literals,
                         absolute_import)
-from ....interfaces.utility import IdentityInterface, Merge, Function
-from ....pipeline import engine as pe
-from ....interfaces.freesurfer import *
+from nipype.interfaces.utility import IdentityInterface, Merge, Function
+from nipype.pipeline import engine as pe
+from nipype.interfaces.freesurfer import *
 from .ba_maps import create_ba_maps_wf
-from ....interfaces.io import DataGrabber
+from nipype.interfaces.io import DataGrabber
 
 
 def create_AutoRecon3(name="AutoRecon3",

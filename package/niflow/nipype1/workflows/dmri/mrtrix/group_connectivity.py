@@ -2,12 +2,12 @@
 import os.path as op
 import warnings
 
-from ....interfaces import io as nio  # Data i/o
-from ....interfaces import utility as util  # utility
-from ....interfaces import cmtk as cmtk
-from ....algorithms import misc as misc
-from ....pipeline import engine as pe  # pipeline engine
-from ....utils.misc import package_check
+from nipype.interfaces import io as nio  # Data i/o
+from nipype.interfaces import utility as util  # utility
+from nipype.interfaces import cmtk as cmtk
+from nipype.algorithms import misc as misc
+from nipype.pipeline import engine as pe  # pipeline engine
+from nipype.utils.misc import package_check
 from .connectivity_mapping import create_connectivity_pipeline
 
 try:
