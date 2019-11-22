@@ -1,0 +1,12 @@
+os: linux
+
+language: python
+
+before_install:
+- pip install --upgrade pip setuptools wheel
+- pip install twine readme_renderer[md]
+- cd package
+- python setup.py sdist bdist_wheel
+
+script:
+- twine check dist/*
