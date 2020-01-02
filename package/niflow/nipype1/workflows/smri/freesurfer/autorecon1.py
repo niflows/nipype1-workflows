@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import (print_function, division, unicode_literals,
                         absolute_import)
-from nipype.utils import NUMPY_MMAP
+
 from nipype.pipeline import engine as pe
 from nipype.interfaces.utility import Function, IdentityInterface
 from nipype.interfaces.freesurfer import *
@@ -21,7 +21,7 @@ def checkT1s(T1_files, cw256=False):
 
     shape = nb.load(T1_files[0]).shape
     for t1 in T1_files[1:]:
-        if nb.load(t1, mmap=NUMPY_MMAP).shape != shape:
+        if nb.load(t1).shape != shape:
             print("ERROR: T1s not the same size. Cannot process {0} and {1} "
                   "together".format(T1_files[0], t1))
             sys.exit(-1)

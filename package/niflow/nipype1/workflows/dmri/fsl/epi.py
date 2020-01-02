@@ -738,7 +738,6 @@ def create_epidewarp_pipeline(name='epidewarp', fieldmap_registration=False):
 def _rotate_bvecs(in_bvec, in_matrix):
     import os
     import numpy as np
-
     name, fext = os.path.splitext(os.path.basename(in_bvec))
     if fext == '.gz':
         name, _ = os.path.splitext(name)
@@ -759,7 +758,6 @@ def _rotate_bvecs(in_bvec, in_matrix):
 def _cat_logs(in_files):
     import shutil
     import os
-
     name, fext = os.path.splitext(os.path.basename(in_files[0]))
     if fext == '.gz':
         name, _ = os.path.splitext(name)
@@ -793,8 +791,7 @@ def _prepare_phasediff(in_file):
     import nibabel as nb
     import os
     import numpy as np
-    from nipype.utils import NUMPY_MMAP
-    img = nb.load(in_file, mmap=NUMPY_MMAP)
+    img = nb.load(in_file)
     max_diff = np.max(img.get_data().reshape(-1))
     min_diff = np.min(img.get_data().reshape(-1))
     A = (2.0 * np.pi) / (max_diff - min_diff)
@@ -813,8 +810,8 @@ def _dilate_mask(in_file, iterations=4):
     import nibabel as nb
     import scipy.ndimage as ndimage
     import os
-    from nipype.utils import NUMPY_MMAP
-    img = nb.load(in_file, mmap=NUMPY_MMAP)
+
+    img = nb.load(in_file)
     dilated_img = img.__class__(
         ndimage.binary_dilation(img.get_data(), iterations=iterations),
         img.affine, img.header)
@@ -831,8 +828,7 @@ def _fill_phase(in_file):
     import nibabel as nb
     import os
     import numpy as np
-    from nipype.utils import NUMPY_MMAP
-    img = nb.load(in_file, mmap=NUMPY_MMAP)
+    img = nb.load(in_file)
     dumb_img = nb.Nifti1Image(np.zeros(img.shape), img.affine, img.header)
     out_nii = nb.funcs.concat_images((img, dumb_img))
     name, fext = os.path.splitext(os.path.basename(in_file))
@@ -848,9 +844,8 @@ def _vsm_remove_mean(in_file, mask_file, in_unwarped):
     import os
     import numpy as np
     import numpy.ma as ma
-    from nipype.utils import NUMPY_MMAP
-    img = nb.load(in_file, mmap=NUMPY_MMAP)
-    msk = nb.load(mask_file, mmap=NUMPY_MMAP).get_data()
+    img = nb.load(in_file)
+    msk = nb.load(mask_file).get_data()
     img_data = img.get_data()
     img_data[msk == 0] = 0
     vsmmag_masked = ma.masked_values(img_data.reshape(-1), 0.0)
@@ -872,9 +867,8 @@ def _ms2sec(val):
 def _split_dwi(in_file):
     import nibabel as nb
     import os
-    from nipype.utils import NUMPY_MMAP
     out_files = []
-    frames = nb.funcs.four_to_three(nb.load(in_file, mmap=NUMPY_MMAP))
+    frames = nb.funcs.four_to_three(nb.load(in_file))
     name, fext = os.path.splitext(os.path.basename(in_file))
     if fext == '.gz':
         name, _ = os.path.splitext(name)
